@@ -1,0 +1,25 @@
+#EXTM3U
+#EXTINF:-1 tvg-id="bbb.demo" tvg-name="Big Buck Bunny (HLS)" tvg-logo="https://peach.blender.org/wp-content/uploads/title_anouncement.jpg" group-title="Demo",Big Buck Bunny (HLS)
+https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8
+#EXTINF:-1 tvg-id="sintel.demo" tvg-name="Sintel (HLS, Subtitles)" group-title="Demo",Sintel (HLS, Subtitles)
+https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8
+#EXTINF:-1 tvg-id="tears.demo" group-title="Demo",Tears of Steel (HLS)
+https://test-streams.mux.dev/tos_ismc/main.m3u8
+#EXTINF:-1 tvg-id="apple.demo" group-title="Demo",Apple Advanced Stream (fMP4, Multi-Audio)
+https://devstreaming-cdn.apple.com/videos/streaming/examples/bipbop_adv_example_hevc/master.m3u8
+#EXTINF:-1 group-title="Filme",Big Buck Bunny (2008)
+https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4
+#EXTINF:-1 group-title="Filme",Big Buck Bunny Trailer (10s)
+https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/1080/Big_Buck_Bunny_1080_10s_5MB.mp4
+#EXTINF:-1 group-title="Filme",Sintel Trailer (10s)
+https://test-videos.co.uk/vids/sintel/mp4/h264/1080/Sintel_1080_10s_5MB.mp4
+#EXTINF:-1 group-title="Filme",Big Buck Bunny (WebM VP9, 10s)
+https://test-videos.co.uk/vids/bigbuckbunny/webm/vp9/720/Big_Buck_Bunny_720_10s_5MB.webm
+#EXTINF:-1 group-title="Serien",Demo Show S01E01
+https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/720/Big_Buck_Bunny_720_10s_1MB.mp4
+#EXTINF:-1 group-title="Serien",Demo Show S01E02
+https://test-videos.co.uk/vids/sintel/mp4/h264/720/Sintel_720_10s_1MB.mp4
+#EXTINF:-1 group-title="Serien",Demo Show S02E01
+https://test-videos.co.uk/vids/jellyfish/mp4/h264/720/Jellyfish_720_10s_1MB.mp4
+#EXTINF:-1 group-title="Serien",Other Show S01E01
+https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/360/Big_Buck_Bunny_360_10s_1MB.mp4

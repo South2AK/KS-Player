@@ -1,0 +1,50 @@
+{
+  "name": "ks-player",
+  "productName": "KS Player",
+  "version": "1.0.0",
+  "description": "Moderner IPTV / M3U / Xtream Player",
+  "main": "dist-electron/main.js",
+  "private": true,
+  "author": "KS",
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "build:main": "esbuild electron/main.ts electron/preload.ts --bundle --platform=node --format=cjs --outdir=dist-electron --external:electron --external:ffmpeg-static --sourcemap",
+    "build:renderer": "vite build",
+    "build": "npm run build:main && npm run build:renderer",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "start": "npm run build && electron .",
+    "dist": "npm run build && electron-builder --win"
+  },
+  "dependencies": {
+    "ffmpeg-static": "^5.2.0",
+    "hls.js": "^1.6.0",
+    "mpegts.js": "^1.8.0",
+    "sax": "^1.4.1"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "@types/sax": "^1.2.7",
+    "@vitejs/plugin-react": "^4.5.0",
+    "electron": "^37.2.0",
+    "electron-builder": "^26.0.12",
+    "esbuild": "^0.25.5",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5",
+    "zustand": "^5.0.5"
+  },
+  "build": {
+    "appId": "de.ks.player",
+    "productName": "KS Player",
+    "directories": { "output": "release" },
+    "electronDist": "node_modules/electron/dist",
+    "files": ["dist/**", "dist-electron/**", "package.json", "!node_modules/ffmpeg-static/**"],
+    "extraResources": [
+      { "from": "node_modules/ffmpeg-static/ffmpeg.exe", "to": "ffmpeg.exe" }
+    ],
+    "win": { "target": ["nsis", "portable"] },
+    "nsis": { "oneClick": false, "allowToChangeInstallationDirectory": true }
+  }
+}
